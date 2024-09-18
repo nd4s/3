@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0;url=https://www.science.knu.ua">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Об'єднуємося...</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 0; 
+        }
+        .montserrat-custom, .montserrat-medium {
+            font-family: "Montserrat", sans-serif;
+            display: block; 
+            margin: 0 auto; 
+            width: 80vw; 
+        }
+        .montserrat-custom {
+            font-weight: 900; 
+            font-size: 5vh; 
+            color: #b80000;
+        }
+        .montserrat-medium {
+            font-weight: 500; 
+            font-size: 2.2vh;
+            color: black;
+        }
+        a {
+            text-decoration: none;
+        }
+        @media (min-width: 768px) {
+            .montserrat-custom {
+                font-size: 3em; 
+                width: 50vw;
+            }
+            .montserrat-medium {
+                font-size: 1.5em;
+                width: 50vw;
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1.5s ease-in;
+        }
+        .fade-in.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="content" class="fade-in">
+        <a href="https://www.google.com" class="montserrat-custom">НАТИСНІСТЬ</a>
+        <a href="https://www.google.com" class="montserrat-medium">якщо Ви досі бачите цей текст</a>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.getElementById('content').classList.add('visible');
+        }, 1500);
+    </script>
+</body>
+</html>
